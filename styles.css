@@ -3,7 +3,7 @@ body {
   font-size: 11pt;
   background-color: #f0f0f0;
 
-  max-width: 960px;
+  max-width: 820px;
   width: 100%;
   margin: 0 auto;
   color: #333;
@@ -21,6 +21,12 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+
+
+h1 {
+  font-size: 2rem;
 }
 
 nav {
@@ -79,16 +85,18 @@ h2::after {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
-  flex-direction: column;
+  flex-direction: row;
 }
 
 .project-card {
+  aspect-ratio: 1.5;
   flex-basis: 45%;
   flex-shrink: 1;
   flex-grow: 1;
+  max-width: 50%;
   display: flex;
   background-color: color-mix( in srgb, currentColor 5%, transparent );
-  flex-direction: row;
+  flex-direction: column;
   padding: 1rem;
   gap: 1rem;
   align-items: center;
@@ -103,9 +111,21 @@ h2::after {
 .project-card > img {
   border-radius: 0.5rem;
 
-  aspect-ratio: 1;
   height: 10rem;
   width: 10rem;
+  width: 100%;
+
+  object-fit: cover;
+}
+
+.intro-container {
+  display: flex;
+  align-items: flex-end;
+
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+
+  border-bottom: 1px solid color-mix( in srgb, currentColor 20%, transparent );
 }
 
 @media (prefers-color-scheme: dark) {
