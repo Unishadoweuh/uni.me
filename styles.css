@@ -78,6 +78,10 @@ a {
   text-decoration: underline;
 }
 
+p {
+  margin-bottom: 1rem;
+}
+
 nav {
   padding: 0.5rem 0;
   display: flex;
