@@ -16,6 +16,7 @@
   <meta property="og:image" content="http://gu3.me" />
   <meta property="og:description" content="Programmer from the UK" />
   <meta name="description" content="Alex Guthrie is a programmer from the UK." />
+  <link rel="stylesheet" href="preflight.css" />
   <link rel="stylesheet" href="fonts.css" />
   <link rel="stylesheet" href="styles.css" />
   <title>Alex Guthrie</title>
@@ -24,41 +25,29 @@
 <body>
   <nav>
     <i class="serif">Alex Guthrie</i>
-    <span id="date"></span>
   </nav>
 
   <main>
 
     <section class="intro-container">
-      <h1 class="serif">Hi, I'm <i>Alex</i>.</h1>
+      <h1 class="serif">Hi. I'm <i>Alex</i>.</h1>
 
       <p>
         I'm a programmer from the UK working at Facepunch.
       </p>  
         <p>
           I like reverse engineering, graphics programming, and game
-        development; I also dabble in design. <wbr />
+        development. <wbr />
           I'm also pretty enthusiastic about hardware hacking and electronics, and I'm always looking for new projects to work on.
         <wbr />
       </p>
       <p>
-        Feel free to check out some of my projects on <a href="https://github.com/xezno">GitHub</a>, or get in touch with me via <a href="mailto:alex@gu3.me">email</a> or <a href="https://twitter.com/realxezno">Twitter</a>.
+        Feel free to check out some of my projects on <a href="https://github.com/xezno">GitHub</a>. <wbr />
+        You can get in touch with me via <a href="mailto:alex@gu3.me">email</a> or <a href="https://twitter.com/realxezno">Twitter</a>.
       </p>
     </section>
 
   </main>
-
-  <script>
-    let date = new Date()
-    let months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov" ];
-    let days = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
-
-    let weekday = days[date.getDay()];
-    let day = date.getDate();
-    let month = months[date.getMonth()];
-    let year = date.getFullYear();
-    document.getElementById('date').innerText = `${weekday}, ${month} ${day} ${year}`
-  </script>
 </body>
 
 </html>

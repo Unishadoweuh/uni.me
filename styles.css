@@ -1,14 +1,51 @@
 body {
   font-family: "Inter", sans-serif;
-  background-color: #f5e9ce;
+  background: radial-gradient(ellipse at top center, #dd5533, #bc2d29, #450e15);
+  background-size: 200% 200%;
+  background-position: 50% 100%;
+  height: 100vh;
   width: 100%;
   margin: 0 auto;
-  color: #000;
+  color: #f5e9ce;
+
+  text-shadow: 0 2px 5px rgba(69, 14, 21, 0.125);
 
   line-height: 2;
   padding: min(5%, 20px) min(10%, 100px);
   
   text-rendering: optimizeLegibility;
+
+  animation: GradientAnimate 60s ease infinite;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 512px;
+  background-image: url("/public/img/noise.png");
+  z-index: -1;
+  opacity: 0.05;
+  mix-blend-mode: overlay;
+}
+
+@keyframes GradientAnimate {
+  from, to {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 100% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  75% {
+    background-position: 0% 100%;
+  }
 }
 
 .serif {
@@ -33,15 +70,11 @@ a {
 
 h1 {
   font-size: 5rem !important;
+  font-weight: normal;
 }
 
 a {
-  color: #dd5533;
   font-weight: bold;
-  text-decoration: none;
-}
-
-a:hover {
   text-decoration: underline;
 }
 
@@ -87,7 +120,15 @@ nav span.fill {
     display: none;
   }
 
+  .intro-container h1 {
+    font-size: 4rem !important;
+  }
+
   .intro-container {
     margin-top: -50px;
+  }
+
+  body {
+    animation: none;
   }
 }
