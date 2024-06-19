@@ -3,7 +3,9 @@
 
 <head>
   <link rel="preload" href="/public/img/avatar.jpg" as="image" />
-  <link rel="preload" href="fonts.css" as="style" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="preload" href="styles.css" as="style" />
 
   <meta charset="UTF-8">
@@ -21,93 +23,42 @@
 
 <body>
   <nav>
-    <p>Alex Guthrie</p>
-    <span class="fill"></span>
-    <span>
-      <a href="https://github.com/xezno">GitHub</a>
-      <a href="https://twitter.com/realxezno">Twitter</a>
-      <a href="https://www.twitch.tv/realxezno">Twitch</a>
-    </span>
+    <i class="serif">Alex Guthrie</i>
+    <span id="date"></span>
   </nav>
 
   <main>
 
     <section class="intro-container">
-      <div class="left">
-        <span class="intro">
-          <h1>Hi, I'm Alex.</h1>
-          <b>A programmer from the UK.</b>
-        </span>
-        <p>I'm a programmer at Facepunch. I like reverse engineering, computer graphics, and game development.</p>
-      </div>
+      <h1 class="serif">Hi, I'm <i>Alex</i>.</h1>
+
+      <p>
+        I'm a programmer from the UK working at Facepunch.
+      </p>  
+        <p>
+          I like reverse engineering, graphics programming, and game
+        development; I also dabble in design. <wbr />
+          I'm also pretty enthusiastic about hardware hacking and electronics, and I'm always looking for new projects to work on.
+        <wbr />
+      </p>
+      <p>
+        Feel free to check out some of my projects on <a href="https://github.com/xezno">GitHub</a>, or get in touch with me via <a href="mailto:alex@gu3.me">email</a> or <a href="https://twitter.com/realxezno">Twitter</a>.
+      </p>
     </section>
 
-    <section>
-      <h2>Skills</h2>
-
-      <ul>
-        <li><b>2D and 3D game development</b>: Experienced in writing C# code for use in game engines (such as S&box and Unity) and as desktop applications</li>
-        <li><b>Desktop applications in C++ and C#</b>: Experienced in writing efficient native code for desktop applications in C++ and C#</li>
-        <li><b>Server-side apps using Node.js</b>: Skilled in creating backends for web apps using Node.js and JS/TS </li>
-        <li><b>Responsive web design</b>: Skilled in creating good-looking web apps for mobile and desktop platforms in HTML, CSS, and JavaScript</li>
-      </ul>
-    </section>
-  
-    <section>
-      <h2>Projects</h2>
-
-      <div class="projects">
-
-        <div class="project-card">
-          <img src="/public/img/projects/sbox.jpg" />
-
-          <span>
-            <b>s&box</b>
-            <p>A game platform by Facepunch built on Source 2, and the spiritual successor to Garry's Mod.</p>
-            <a href="https://sbox.game/">Website</a>
-          </span>
-        </div>
-
-        <div class="project-card">
-          <img src="/public/img/projects/opentpw.png" />
-
-          <span>
-            <b>OpenTPW</b>
-            <p>An open source reimplementation of the classic Bullfrog game Sim Theme Park / Theme Park World.</p>
-            <a href="https://github.com/themeparkworld/opentpw">GitHub</a>
-          </span>
-        </div>
-
-        <div class="project-card">
-          <img src="/public/img/projects/mocha.png" />
-
-          <span>
-            <b>Mocha</b>
-            <p>A simple game engine written in C++ with C# interop, a Vulkan renderer, and Jolt physics.</p>
-            <a href="https://github.com/mocha-engine/mocha">GitHub</a>
-          </span>
-        </div>
-
-        <div class="project-card">
-          <img src="/public/img/projects/tin.png" />
-
-          <span>
-            <b>Tin</b>
-            <p>A programming language written in C, with a custom backend targeting RISC-V.</p>
-            <a href="https://github.com/The-Tin-Foil-Hat-Society/tin">GitHub</a>
-          </span>
-        </div>
-
-      </div>
-
-    </section>
-
-    <section>
-      <h2>Contact Me</h2>
-
-      <p>You can <a href="mailto:alex@gu3.me">email me</a> or find me on <a href="https://twitter.com/realxezno">Twitter</a>.</p>
-    </section>
   </main>
+
+  <script>
+    let date = new Date()
+    let months = [ "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov" ];
+    let days = [ "Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat" ];
+
+    let weekday = days[date.getDay()];
+    let day = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+    document.getElementById('date').innerText = `${weekday}, ${month} ${day} ${year}`
+  </script>
 </body>
 
 </html>
