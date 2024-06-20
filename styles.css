@@ -116,6 +116,27 @@ nav span.fill {
   display: none;
 }
 
+.wave {
+  display: inline-block;
+  animation: wave 2s ease infinite;
+  transform-origin: 75% 75%;
+}
+
+@keyframes wave {
+  0%, 40%, 100% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg);
+  }
+  20% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+}
+
 @media screen and (max-width: 600px) {
   nav {
     display: none;
