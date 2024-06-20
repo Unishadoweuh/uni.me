@@ -10,7 +10,7 @@ body {
   padding: min(5%, 20px) min(10%, 100px);
   
   text-rendering: optimizeLegibility;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.0125em;
 }
 
 body::before {
@@ -32,7 +32,7 @@ body::before {
 
 main {
   width: 100%;
-  max-width: 720px;
+  max-width: 500px;
   margin: auto;
 }
 
@@ -48,6 +48,13 @@ a {
 h1 {
   font-size: 5rem !important;
   font-weight: normal;
+}
+
+h1 img {
+  width: 1em;
+  height: 1em;
+  margin-bottom: 1rem;
+  display: inline-block;
 }
 
 a {
@@ -93,6 +100,10 @@ nav span.fill {
   margin-top: -100px;
 }
 
+.intro-container p {
+  text-align: justify;
+}
+
 .intro-container h1 {
   margin-bottom: 0;
 }
@@ -103,7 +114,7 @@ nav span.fill {
   }
 
   .intro-container h1 {
-    font-size: 4rem !important;
+    font-size: 3rem !important;
   }
 
   .intro-container {
