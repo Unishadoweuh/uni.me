@@ -108,6 +108,14 @@ nav span.fill {
   margin-bottom: 0;
 }
 
+.mac .non-mac {
+  display: none;
+}
+
+.non-mac .mac {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   nav {
     display: none;

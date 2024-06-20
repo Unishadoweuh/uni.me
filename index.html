@@ -30,7 +30,13 @@
     <section class="intro-container">
       <h1 class="serif">
         Hi. I'm <i>Alex</i>.
-        <img src="/public/img/wave.svg" alt="Wave" />
+
+        <span class="non-mac">
+          <img src="/public/img/wave.png" alt="Wave" />
+        </span>
+        <span class="mac">
+          👋
+        </span>
       </h1>
 
       <p>
@@ -42,6 +48,14 @@
     </section>
 
   </main>
+
+  <script>
+    if (navigator.userAgent.indexOf('Mac OS') !== -1) {
+      document.body.classList.add('mac');
+    } else {
+      document.body.classList.add('non-mac');
+    }
+  </script>
 </body>
 
 </html>
