@@ -21,6 +21,14 @@
 </head>
 
 <body>
+  <script>
+    if (navigator.userAgent.indexOf('Mac OS') !== -1) {
+      document.body.classList.add('mac');
+    } else {
+      document.body.classList.add('non-mac');
+    }
+  </script>
+
   <nav>
     <i class="serif">Alex Guthrie</i>
   </nav>
@@ -48,14 +56,6 @@
     </section>
 
   </main>
-
-  <script>
-    if (navigator.userAgent.indexOf('Mac OS') !== -1) {
-      document.body.classList.add('mac');
-    } else {
-      document.body.classList.add('non-mac');
-    }
-  </script>
 </body>
 
 </html>
